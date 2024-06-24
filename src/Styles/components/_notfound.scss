@@ -1,0 +1,43 @@
+.notfound
+{
+    height: 700px;
+
+    .container
+    {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p
+        {
+            color: $main-color;
+
+            &.nf_text
+            {
+                font-size: 288px;
+                font-weight: 700;
+            }
+
+            &.message
+            {
+                font-weight: 500;
+                font-size: 36px;
+
+                margin-top: 50px;
+            }
+        }
+
+        a
+        {
+            color: black;
+            text-decoration: underline;
+            font-size: 18px;
+            font-weight: 500;
+
+            margin-top: 150px;
+        }
+    }
+
+    
+}
