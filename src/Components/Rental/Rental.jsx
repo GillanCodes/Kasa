@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import data from "../../backend.json";
 
 export default function Rental() {
 
-    let { id } = useParams();
+    const { id } = useParams();
+    const [rent, setRent] = useState();
+    const [load, setLoad] = useState(false);
+
+    useEffect(() => {
+        data.map((rent) => {
+            if (rent.id === id)
+            {
+                setRent(rent)
+                setLoad(true)
+            }
+        })
+    }, [id]);
 
     return (
-        <div>Rental - {id}</div>
+        <>
+            {load && (
+                <div>
+                
+                </div>
+            )}
+        </>
     )
 }
