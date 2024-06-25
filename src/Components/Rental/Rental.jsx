@@ -21,7 +21,15 @@ export default function Rental() {
     return (
         <>
             {load && (
-                <div>
+                <div className='rental'>
+
+                    <div className="slideshow">
+                        {rent.pictures.map((pic) => {
+                            return (
+                                <img src={pic} alt="rental_slide" />
+                            )
+                        })}
+                    </div>
                 
                 </div>
             )}
