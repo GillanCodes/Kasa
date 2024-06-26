@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import data from "../../backend.json";
+import Slideshow from './Slideshow';
 
 export default function Rental() {
 
@@ -23,13 +24,7 @@ export default function Rental() {
             {load && (
                 <div className='rental'>
 
-                    <div className="slideshow">
-                        {rent.pictures.map((pic) => {
-                            return (
-                                <img src={pic} alt="rental_slide" />
-                            )
-                        })}
-                    </div>
+                   <Slideshow pictures={rent.pictures} /> 
                 
                 </div>
             )}
