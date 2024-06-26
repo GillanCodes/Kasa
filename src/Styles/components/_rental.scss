@@ -3,6 +3,7 @@
 
     margin-top: 75px;
 
+    //Slide Show
     .slideshow
     {
         
@@ -42,6 +43,57 @@
 
             border-radius: 25px;
              
+        }
+
+    }
+
+    //Infos
+    .infos
+    {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .rent-info
+        {
+            h2.rent-title
+            { 
+                color: $main-color;
+                font-weight: 500;
+                font-size: 36px;
+                margin-top: 25px;
+            }
+
+            h3.rent-location
+            {
+                font-weight: 500;
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        }
+
+        .host
+        {
+            display: flex;
+            align-items: center;
+
+            p.host-name
+            {
+                max-width: 100px;
+                overflow-wrap: break-word;
+                text-align: right;
+                color: $main-color;
+                margin-right: 10px;
+            }
+
+            img.host-pic
+            {
+                border-radius: 50%;
+                height: 64px;
+                width: 64px;
+                object-fit: cover;
+            }
         }
 
     }
