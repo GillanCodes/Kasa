@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import data from "../../backend.json";
 import Slideshow from './Slideshow';
 import Rating from './Rating';
+import Dropdown from '../../Modules/Dropdown';
 
 export default function Rental() {
 
@@ -56,10 +57,12 @@ export default function Rental() {
                             </div>
                             <Rating rating={rent.rating} />
                         </div>
-                   </div>
+                   </div>                   
                    
-                   
-                
+
+                    <Dropdown type={"array"} title="Dropdown-dev" data={rent.equipments} />
+                    <Dropdown type={"string"} title="Dropdown-dev" data={rent.description} />
+
                 </div>
             )}
         </>

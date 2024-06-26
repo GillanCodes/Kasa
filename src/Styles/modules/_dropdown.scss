@@ -1,0 +1,44 @@
+.dropdown-container
+{
+
+    width: 100%;
+
+    .dropdown-head
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: $main-color;
+        color: white;
+
+        height: 52px;
+        border-radius: 5px;
+
+        *:first-child { margin-left: 25px;}
+        *:last-child { margin-right: 25px;}
+    }
+
+    .dropdown-body
+    {
+        background-color: $dropdown-body;
+        border-radius: 5px;
+        padding: 25px 0;
+
+        p, ul
+        {
+            margin-left: 25px;
+            padding: 0;
+        }
+
+        ul
+        {
+            list-style: none;
+            line-height: 25px;
+        }
+
+        
+    }
+
+}
