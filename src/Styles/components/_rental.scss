@@ -48,53 +48,96 @@
     }
 
     //Infos
-    .infos
+
+    .infos-container
     {
 
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
-        .rent-info
+        margin-top: 25px;
+
+
+        .infos
         {
-            h2.rent-title
-            { 
-                color: $main-color;
-                font-weight: 500;
-                font-size: 36px;
-                margin-top: 25px;
-            }
-
-            h3.rent-location
-            {
-                font-weight: 500;
-                font-size: 18px;
-                margin-top: 10px;
-            }
-        }
-
-        .host
-        {
+    
             display: flex;
-            align-items: center;
-
-            p.host-name
+            flex-direction: column;
+    
+            .rent-info
             {
-                max-width: 100px;
-                overflow-wrap: break-word;
-                text-align: right;
-                color: $main-color;
-                margin-right: 10px;
+                h2.rent-title
+                { 
+                    color: $main-color;
+                    font-weight: 500;
+                    font-size: 36px;
+                }
+    
+                h3.rent-location
+                {
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
             }
 
-            img.host-pic
+            //Tags
+            .rent-tags
             {
-                border-radius: 50%;
-                height: 64px;
-                width: 64px;
-                object-fit: cover;
+                display: flex;
+
+                .tag
+                {
+                    
+                    min-width: 95px;
+                    padding: 0 10px;
+                    height: 25px;
+                    border-radius: 10px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    font-size: 14px;
+                    font-weight: 700;
+
+                    background-color: $main-color;
+                    color: white;
+
+                    
+                    &:not(:first-child) 
+                    {
+                        margin-left: 10px;
+                    }
+
+                }
             }
+    
+            .host
+            {
+                display: flex;
+                align-items: center;
+    
+                p.host-name
+                {
+                    max-width: 100px;
+                    overflow-wrap: break-word;
+                    text-align: right;
+                    color: $main-color;
+                    margin-right: 10px;
+                }
+    
+                img.host-pic
+                {
+                    border-radius: 50%;
+                    height: 64px;
+                    width: 64px;
+                    object-fit: cover;
+                }
+            }
+    
         }
 
     }
+    
 }

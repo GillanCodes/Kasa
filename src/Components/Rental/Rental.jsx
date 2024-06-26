@@ -28,16 +28,33 @@ export default function Rental() {
                 <div className='rental'>
 
                    <Slideshow pictures={rent.pictures} />
-                   <div className='infos'>
-                        <div className='rent-info'>
-                            <h2 className='rent-title'>{rent.title}</h2>
-                            <h3 className='rent-location'>{rent.location}</h3>
+
+                   <div className="infos-container">
+                        <div className='infos'>
+                            <div className='rent-info'>
+                                <h2 className='rent-title'>{rent.title}</h2>
+                                <h3 className='rent-location'>{rent.location}</h3>
+                            </div>
+                            <div className="rent-tags">
+                                {rent.tags.map((tag) => {
+                                    return (
+                                        <div className="tag">
+                                            <p>{tag}</p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
-                        <div className="host">
-                            <p className='host-name'>{rent.host.name}</p>
-                            <img className='host-pic' src={rent.host.picture} alt="Host" />
+
+                        <div className="infos">
+                            <div className="host">
+                                <p className='host-name'>{rent.host.name}</p>
+                                <img className='host-pic' src={rent.host.picture} alt="Host" />
+                            </div>
                         </div>
                    </div>
+                   
+                   
                 
                 </div>
             )}
