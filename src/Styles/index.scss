@@ -17,3 +17,6 @@
 }
 
 .is-hidden { display: none; }
+
+.fa-star.is-active { color: $main-color; }
+.fa-star.is-disable { color: gray; }
