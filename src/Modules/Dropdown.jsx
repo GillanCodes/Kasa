@@ -36,7 +36,7 @@ export default function Dropdown({type, title, data}) {
                         </>
                     )}
 
-                    {type != "string" && type != "array" && (
+                    {type !== "string" && type !== "array" && (
                         <p>Invalid_type_props : Type prop should be ethier "string" or "array"</p>
                     )}
                 </div>

@@ -12,7 +12,7 @@ export default function Rating({rating}) {
         //On inverse le tout
         stars.reverse()
         //On supprime les zeros en trop
-        while(stars.length != 5)
+        while(stars.length !== 5)
         {
             stars.pop();
         }
