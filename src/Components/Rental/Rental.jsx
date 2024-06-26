@@ -9,13 +9,16 @@ export default function Rental() {
     const [rent, setRent] = useState();
     const [load, setLoad] = useState(false);
 
+
     useEffect(() => {
         data.map((rent) => {
             if (rent.id === id)
             {
                 setRent(rent)
                 setLoad(true)
+                return 0;
             }
+            return 0;
         })
     }, [id]);
 
