@@ -60,6 +60,12 @@
 
         .infos
         {
+
+            //Alignement pour le propriétaire et les etoiles
+            &:last-child
+            {
+                align-items: flex-end;
+            }
     
             display: flex;
             flex-direction: column;
@@ -135,6 +141,25 @@
                     height: 64px;
                     width: 64px;
                     object-fit: cover;
+                }
+            }
+
+            //Les étoiles
+            .rating
+            {
+
+                margin-top: 25px;
+                
+                //Une seule étoile
+                i
+                {
+
+                    font-size: 24px;
+                    
+                    &:not(:first-child)
+                    {
+                        margin-left: 10px;
+                    }
                 }
             }
     

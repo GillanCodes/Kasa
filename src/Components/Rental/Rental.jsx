@@ -23,23 +23,7 @@ export default function Rental() {
         })
     }, [id]);
 
-    const rating = (rate) => {
-        //On init le tableau des etoiles
-        var stars = [0, 0, 0, 0, 0];
-        //On boucle pour rajouter le nombre de 1 (etoile aquise)
-        for (let index = 0; index < rate; index++) {
-            stars.push(1);
-        }
-        //On inverse le tout
-        stars.reverse()
-        //On supprime les zeros en trop
-        while(stars.length != 5)
-        {
-            stars.pop();
-        }
-        //on return la table
-        return stars;
-    }
+    
 
     return (
         <>
