@@ -15,17 +15,19 @@
         span
         {
             position: absolute;
+            color: white;
+            font-size: 100px;
         }
 
         #prev
         {
-            top: calc((415px / 2) - 10px);
+            top: calc((415px / 2) - 50px);
             left: 10px;
         }
 
         #next
         {
-            top: calc((415px / 2) - 10px);
+            top: calc((415px / 2) - 50px);
             right: 10px;
         }
 

@@ -14,13 +14,15 @@ export default function Slideshow({ pictures }) {
 
     return (
         <div className="slideshow">
-            <span id='prev' onClick={previus}>prev</span>
+            <span id='prev' onClick={previus}><i class="fa-solid fa-angle-left"></i></span>
+            {/* <span id='prev' onClick={previus}>{"<"}</span> */}
             {pictures.map((pic, index) => {
                 return (
                     <img src={pic} key={index} alt="rental_slide" className={index === slide ? "slide" : "slide is-hidden"} />
                 )
             })}
-            <span id='next' onClick={next}>next</span>
+            <span id='next' onClick={next}><i class="fa-solid fa-chevron-right"></i></span>
+            {/* <span id='next' onClick={next}>{">"}</span> */}
         </div>
     )
 }
