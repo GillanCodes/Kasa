@@ -31,9 +31,9 @@ export default function Rental() {
             {load && (
                 <div className='rental'>
 
-                   <Slideshow pictures={rent.pictures} />
+                    <Slideshow pictures={rent.pictures} />
 
-                   <div className="infos-container">
+                    <div className="infos-container">
                         <div className='infos'>
                             <div className='rent-info'>
                                 <h2 className='rent-title'>{rent.title}</h2>
@@ -42,7 +42,7 @@ export default function Rental() {
                             <div className="rent-tags">
                                 {rent.tags.map((tag) => {
                                     return (
-                                        <div className="tag">
+                                         <div className="tag">
                                             <p>{tag}</p>
                                         </div>
                                     )
@@ -57,12 +57,19 @@ export default function Rental() {
                             </div>
                             <Rating rating={rent.rating} />
                         </div>
-                   </div>                   
+                    </div>                   
+
+                    <div className="dropdowns">
+                        <div className='content'>
+                            <Dropdown type={"string"} title="Description" data={rent.description} />
+                        </div>
+                        <div className='content'>
+                            <Dropdown type={"array"} title="Équipements" data={rent.equipments} />
+                        </div>
+                    </div>
                    
 
-                    <Dropdown type={"array"} title="Dropdown-dev" data={rent.equipments} />
-                    <Dropdown type={"string"} title="Dropdown-dev" data={rent.description} />
-
+                    
                 </div>
             )}
         </>
