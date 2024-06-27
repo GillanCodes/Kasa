@@ -1,4 +1,36 @@
-div.about
+.about .banner
 {
+
+    height: 223px;
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+
+    margin-top: 50px;
     
+    .image
+    {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+.about
+{
+
+    
+    .content
+    {
+        padding: 25px 0;
+        max-width: 80%;
+        margin: auto;
+
+        .dropdown-container:not(:first-child){
+            margin-top: 25px;
+        }
+    }
+
+
 }
