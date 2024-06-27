@@ -2,7 +2,6 @@
 .home .banner
 {
 
-    height: 223px;
     overflow: hidden;
     border-radius: 25px;
     position: relative;
@@ -17,7 +16,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 48px;
         font-weight: 700;
         width: 100%;
         text-align: center;
@@ -31,7 +29,6 @@
         width: 100%;
         opacity: .5;
     }
-
 }
 
 // Gallery
@@ -56,4 +53,34 @@
         gap: $cards-gap;
         padding: $cards-gap 0;
     }
+}
+
+//not Mobile
+@media screen and (min-width: 769px)
+{
+    .home .banner
+    {
+        height: 223px;
+
+        .text
+        {
+            font-size: 48px;
+        }
+    } 
+}
+
+//Mobile
+@media screen and (max-width: 768px)
+{
+    .home .banner
+    {
+        height: 111px;
+
+        .text
+        {
+            font-size: 24px;
+            max-width: 80%;
+            text-align: left;
+        }
+    } 
 }
