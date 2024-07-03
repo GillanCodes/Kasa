@@ -6,6 +6,13 @@
     .dropdown-head
     {
 
+        p {
+            cursor: pointer;
+
+            &::selection { background-color: none;}
+            &::-moz-selection { background-color: none;}
+        }
+
         &:hover { cursor: pointer; }
         width: 100%;
         display: flex;
