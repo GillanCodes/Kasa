@@ -22,6 +22,7 @@ export default function Slideshow({ pictures }) {
                 )
             })}
             <span id='next' onClick={next}><i class="fa-solid fa-chevron-right"></i></span>
+            <p id='indicator'>{slide + 1}/{pictures.length}</p>
             {/* <span id='next' onClick={next}>{">"}</span> */}
         </div>
     )
