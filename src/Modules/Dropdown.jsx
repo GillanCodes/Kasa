@@ -16,8 +16,8 @@ export default function Dropdown({type, title, data}) {
                 {isOpen ? <i class="fa-solid fa-chevron-down"></i> : <i class="fa-solid fa-chevron-up"></i> }
             </div>
 
-            {isOpen && (
-                <div className="dropdown-body">
+
+                <div className={`dropdown-body is-${isOpen ? "open" : "close"}`}>
                     {type === "array" && (
                         <>
                             <ul>
@@ -40,7 +40,7 @@ export default function Dropdown({type, title, data}) {
                         <p>Invalid_type_props : Type prop should be ethier "string" or "array"</p>
                     )}
                 </div>
-            )}
+
 
             
 
