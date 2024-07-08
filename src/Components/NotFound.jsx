@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function NotFound() {
   return (
+
+    // Simple "404" error page
     <div className='notfound'>
       <div className="container">
 
