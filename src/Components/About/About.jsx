@@ -6,8 +6,11 @@ export default function About() {
   return (
     <div className='about'>
 
+        {/* Banner with image */}
         <Banner /> 
-        
+
+
+        {/* All the about dropdown */}
         <div className="content">
           <Dropdown type={"string"} title="Fiabilité" data={"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."} />
           <Dropdown type={"string"} title="Respect" data={"La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."} />
