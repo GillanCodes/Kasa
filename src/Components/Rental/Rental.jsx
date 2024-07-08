@@ -7,32 +7,44 @@ import Dropdown from '../../Modules/Dropdown';
 
 export default function Rental() {
 
+    // Get id in url
     const { id } = useParams();
+    //Init current rent
     const [rent, setRent] = useState();
+    // is the rent load ?
     const [load, setLoad] = useState(false);
 
 
     useEffect(() => {
+        // loop the rents
         data.map((rent) => {
+            // IF rent is === to id (url)
             if (rent.id === id)
             {
+                // store rent
                 setRent(rent)
+                // Set page as loaded
                 setLoad(true)
+                // map must return value
                 return 0;
             }
+            // map must return value
             return 0;
         })
-    }, [id]);
+    }, [id]); // If id change the useEffect is refresh
 
     
 
     return (
         <>
+            {/* Page display only if load is true */}
             {load && (
                 <div className='rental'>
 
+                    {/* Slideshow of all the rent pics */}
                     <Slideshow pictures={rent.pictures} />
 
+                    {/* Informations such as host name, stars, location and tags */}
                     <div className="infos-container">
                         <div className='infos'>
                             <div className='rent-info'>
@@ -40,6 +52,7 @@ export default function Rental() {
                                 <h3 className='rent-location'>{rent.location}</h3>
                             </div>
                             <div className="rent-tags">
+                                {/* Loop tag to display all of them */}
                                 {rent.tags.map((tag) => {
                                     return (
                                          <div className="tag">
@@ -49,16 +62,19 @@ export default function Rental() {
                                 })}
                             </div>
                         </div>
-
+                            
+                        {/* Host infos */}
                         <div className="infos">
                             <div className="host">
                                 <p className='host-name'>{rent.host.name}</p>
                                 <img className='host-pic' src={rent.host.picture} alt="Host" />
                             </div>
+                            {/* Display stars */}
                             <Rating rating={rent.rating} />
                         </div>
                     </div>                   
 
+                    {/* Dropdown with description and equipments */}
                     <div className="dropdowns">
                         <div className='content'>
                             <Dropdown type={"string"} title="Description" data={rent.description} />
