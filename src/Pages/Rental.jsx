@@ -4,6 +4,7 @@ import data from "../backend.json";
 import Slideshow from '../Components/Slideshow';
 import Rating from '../Components/Rating';
 import Dropdown from '../Components/Dropdown';
+import NotFound from './NotFound';
 
 export default function Rental() {
 
@@ -38,7 +39,7 @@ export default function Rental() {
     return (
         <>
             {/* Page display only if load is true */}
-            {load && (
+            {load ? (
                 <div className='rental'>
 
                     {/* Slideshow of all the rent pics */}
@@ -87,6 +88,8 @@ export default function Rental() {
 
                     
                 </div>
+            ) : (
+                <NotFound />
             )}
         </>
     )
