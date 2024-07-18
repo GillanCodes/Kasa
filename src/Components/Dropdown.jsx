@@ -17,7 +17,7 @@ export default function Dropdown({type, title, data}) { // We get a type, title 
             <div className='dropdown-head' onClick={handleOpen}> 
                 <p>{title}</p>
                 {/* The "chevron" swith side (up = open | down = close) */}
-                {isOpen ? <i class="fa-solid fa-chevron-down"></i> : <i class="fa-solid fa-chevron-up"></i> }
+                <i className="fa-solid fa-chevron-down"></i>
             </div>
 
                 {/* If body is open, display body content */}
