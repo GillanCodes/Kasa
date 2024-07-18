@@ -30,6 +30,16 @@
 
         *:first-child { margin-left: 25px;}
         *:last-child { margin-right: 25px;}
+
+        i.close {
+            animation: chevron-close 0.2s ease-in-out;
+            transform: rotate(0deg);
+        }
+
+        i.open {
+            animation: chevron-open 0.2s ease-in-out;
+            transform: rotate(180deg);
+        }
     }
 
     .dropdown-body
@@ -97,4 +107,23 @@
         opacity: 0;
     }
 }
-  
+
+@keyframes chevron-open
+{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes chevron-close
+{
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
