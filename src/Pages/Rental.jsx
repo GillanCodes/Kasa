@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import data from "../../backend.json";
-import Slideshow from './Slideshow';
-import Rating from './Rating';
-import Dropdown from '../../Modules/Dropdown';
+import data from "../backend.json";
+import Slideshow from '../Components/Slideshow';
+import Rating from '../Components/Rating';
+import Dropdown from '../Components/Dropdown';
 
 export default function Rental() {
 
@@ -53,9 +53,9 @@ export default function Rental() {
                             </div>
                             <div className="rent-tags">
                                 {/* Loop tag to display all of them */}
-                                {rent.tags.map((tag) => {
+                                {rent.tags.map((tag, key) => {
                                     return (
-                                         <div className="tag">
+                                         <div className="tag" key={key}>
                                             <p>{tag}</p>
                                         </div>
                                     )

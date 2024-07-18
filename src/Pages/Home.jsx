@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner from './Banner'
-import Gallery from './Gallery'
+import Banner from '../Components/Banner'
+import Gallery from '../Components/Gallery'
 
 export default function Home() {
   return (

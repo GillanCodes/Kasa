@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from './Banner'
-import Dropdown from "../../Modules/Dropdown";
+import Banner from '../Components/Banner'
+import Dropdown from "../Components/Dropdown";
 
 export default function About() {
   return (

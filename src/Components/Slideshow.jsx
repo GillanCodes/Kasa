@@ -21,7 +21,7 @@ export default function Slideshow({ pictures }) { //Pass an array of pics
     return (
         <div className="slideshow">
             {/* Prevuis btn */}
-            <span id='prev' onClick={previus}><i class="fa-solid fa-angle-left"></i></span>
+            <span id='prev' onClick={previus}><i className="fa-solid fa-angle-left"></i></span>
             {/* Create all pics elements */}
             {pictures.map((pic, index) => {
                 return (
@@ -30,7 +30,7 @@ export default function Slideshow({ pictures }) { //Pass an array of pics
                 )
             })}
             {/* Next btn */}
-            <span id='next' onClick={next}><i class="fa-solid fa-chevron-right"></i></span>
+            <span id='next' onClick={next}><i className="fa-solid fa-chevron-right"></i></span>
             {/* Little text to show user where he is on how mush pics the rent has */}
             <p id='indicator'>{slide + 1}/{pictures.length}</p>
         </div>
