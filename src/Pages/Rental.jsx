@@ -4,7 +4,7 @@ import data from "../backend.json";
 import Slideshow from '../Components/Slideshow';
 import Rating from '../Components/Rating';
 import Dropdown from '../Components/Dropdown';
-import NotFound from './NotFound';
+import NotFound from '../Components/NotFound';
 
 export default function Rental() {
 
