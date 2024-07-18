@@ -26,9 +26,9 @@ export default function Dropdown({type, title, data}) { // We get a type, title 
                     {type === "array" && (
                         <>
                             <ul>
-                                {data.map((item) => {
+                                {data.map((item, key) => {
                                     return (
-                                        <li>{item}</li>
+                                        <li key={key}>{item}</li>
                                     )
                                 })}
                             </ul>

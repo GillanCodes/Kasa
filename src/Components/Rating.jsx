@@ -22,10 +22,10 @@ export default function Rating({rating}) {
 
     return (
         <div className="rating">
-            {stars(rating).map((star) => {
+            {stars(rating).map((star, key) => {
                 return (
                     // Display each stars, if aquire "is-active" to get a color, else just display "is-disable" color gray
-                    <i className={star === 1 ? "fa-solid fa-star is-active" : "fa-solid fa-star is-disable"}></i>
+                    <i className={star === 1 ? "fa-solid fa-star is-active" : "fa-solid fa-star is-disable"} key={key}></i>
                 )
             })}
         </div>
